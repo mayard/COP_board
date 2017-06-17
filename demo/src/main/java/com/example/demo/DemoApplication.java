@@ -25,7 +25,8 @@ public class DemoApplication {
 		return sessionFactory.getObject();
 	}
 
-	@Bean public SqlSessionTemplate firstSqlSessionTemplate(SqlSessionFactory firstSqlSessionFactory) throws Exception {
+	@Bean
+	public SqlSessionTemplate firstSqlSessionTemplate(SqlSessionFactory firstSqlSessionFactory) throws Exception {
 		return new SqlSessionTemplate(firstSqlSessionFactory);
 	}
 

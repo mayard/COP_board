@@ -9,7 +9,7 @@ public class BoardVo {
     private String registertime;
     private String modifytime;
 
-    private int linkCnt;
+    private int likeCnt;
     private int commentCnt;
 
     public int getBno() {
@@ -60,12 +60,12 @@ public class BoardVo {
         this.modifytime = modifytime;
     }
 
-    public int getLinkCnt() {
-        return linkCnt;
+    public int getLikeCnt() {
+        return likeCnt;
     }
 
-    public void setLinkCnt(int linkCnt) {
-        this.linkCnt = linkCnt;
+    public void setLikeCnt(int likeCnt) {
+        this.likeCnt = likeCnt;
     }
 
     public int getCommentCnt() {
@@ -85,7 +85,7 @@ public class BoardVo {
                 ", content='" + content + '\'' +
                 ", registertime='" + registertime + '\'' +
                 ", modifytime='" + modifytime + '\'' +
-                ", linkCnt=" + linkCnt +
+                ", likeCnt=" + likeCnt +
                 ", commentCnt=" + commentCnt +
                 '}';
     }
