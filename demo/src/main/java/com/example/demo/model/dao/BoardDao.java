@@ -1,12 +1,11 @@
 package com.example.demo.model.dao;
 
-import org.apache.ibatis.annotations.Mapper;
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public class BoardDao<T> {
@@ -22,4 +21,12 @@ public class BoardDao<T> {
     public int insert(String statement, Object param) {
         return sqlSession.insert(statement, param);
     }
+    
+    public int delete(String statement, Object param) {
+        return sqlSession.delete(statement, param);
+    }
+    
+    public int update(String statement, Object param) {
+        return sqlSession.update(statement, param);
+    } 
 }

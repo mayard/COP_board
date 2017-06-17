@@ -18,7 +18,7 @@ public class DemoApplicationTests {
 	@Test
 	public void dbTest() {
 
-		System.out.println(boardDao.selectList("board.test"));
+		System.out.println(boardDao.selectList("board.test", null));
 
 		BoardVo boardVo = new BoardVo();
 

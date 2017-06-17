@@ -34,4 +34,13 @@ public class BoardService {
 		return boardDao.insert("board.board_insert", boardvo);
 	}
 	
+	public int delete_board(BoardVo boardvo) {
+		
+		return boardDao.delete("board.board_delete", boardvo);
+	}	
+	
+	public int modify_board(BoardVo boardvo) {
+		
+		return boardDao.update("board.board_modify", boardvo);
+	}	
 }

@@ -16,4 +16,14 @@
         VALUES
           (#{username}, #{subject}, #{content}, now(), now(), 0, 0)
     </insert>
+    
+    <delete id="board_delete" parameterType="com.example.demo.model.vo.BoardVo">
+        DELETE FROM o_board
+        WHERE #{bno}
+    </delete>
+    
+    <update id="board_modify" parameterType="com.example.demo.model.vo.BoardVo">
+        UPDATE o_board SET content = #{content}, modifytime = now()
+        WHERE #{bno}
+    </update>    
 </mapper>
