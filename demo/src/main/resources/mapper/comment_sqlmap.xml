@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="comment">
+    <select id="comment_select" parameterType="integer" resultType="com.example.demo.model.vo.CommentVo">
+        SELECT * FROM o_comment
+        WHERE bno = #{bno}
+    </select>
+
+    <insert id="comment_insert" parameterType="com.example.demo.model.vo.CommentVo">
+        INSERT INTO o_comment
+          (bno, comment, username, registertime)
+        VALUES
+          (#{bno}, #{comment}, #{username}, now())
+    </insert>
+</mapper>

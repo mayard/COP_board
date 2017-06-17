@@ -15,11 +15,11 @@ public class BoardDao<T> {
     @Qualifier("firstSqlSessionTemplate")
     private SqlSession sqlSession;
 
-    public List<T> selectList(String statement) {
-        return sqlSession.selectList(statement);
+    public List<T> selectList(String statement, Object param) {
+        return sqlSession.selectList(statement, param);
     }
 
-    public int insert(String statement, Object object) {
-        return sqlSession.insert(statement, object);
+    public int insert(String statement, Object param) {
+        return sqlSession.insert(statement, param);
     }
 }

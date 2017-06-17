@@ -45,7 +45,7 @@ public class BoardController {
      * @param board
      * @return
      */
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    @RequestMapping(value = "/board/register", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> board_register(BoardVo board)
     {
@@ -69,7 +69,4 @@ public class BoardController {
 		
 		return jsonObject;	
     }
-
-    
- 
 }

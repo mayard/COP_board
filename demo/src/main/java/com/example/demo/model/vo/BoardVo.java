@@ -1,5 +1,7 @@
 package com.example.demo.model.vo;
 
+import java.util.List;
+
 public class BoardVo {
 
     private int bno;
@@ -10,7 +12,8 @@ public class BoardVo {
     private String modifytime;
 
     private int likeCnt;
-    private int commentCnt;
+
+    private List<CommentVo> comments;
 
     public int getBno() {
         return bno;
@@ -68,12 +71,12 @@ public class BoardVo {
         this.likeCnt = likeCnt;
     }
 
-    public int getCommentCnt() {
-        return commentCnt;
+    public List<CommentVo> getComments() {
+        return comments;
     }
 
-    public void setCommentCnt(int commentCnt) {
-        this.commentCnt = commentCnt;
+    public void setComments(List<CommentVo> comments) {
+        this.comments = comments;
     }
 
     @Override
@@ -86,7 +89,7 @@ public class BoardVo {
                 ", registertime='" + registertime + '\'' +
                 ", modifytime='" + modifytime + '\'' +
                 ", likeCnt=" + likeCnt +
-                ", commentCnt=" + commentCnt +
+                ", comments=" + comments +
                 '}';
     }
 }
