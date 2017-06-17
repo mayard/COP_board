@@ -20,6 +20,17 @@ public class DemoApplicationTests {
 
 		System.out.println(boardDao.selectList("board.test"));
 
+		BoardVo boardVo = new BoardVo();
+
+		boardVo.setUsername("test");
+		boardVo.setSubject("제목");
+		boardVo.setContent("내용");
+
+		boardDao.insert("board.board_insert", boardVo);
+	}
+	
+	@Test
+	public void insert_commnet() {
 
 		BoardVo boardVo = new BoardVo();
 
